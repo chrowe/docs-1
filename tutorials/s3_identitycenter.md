@@ -73,7 +73,12 @@ an external identity provider (IdP).
 
 1. Add a new [Bookmark](../cyberduck/bookmarks.md) in Cyberduck or Mountain Duck and choose *AWS S3 (IAM Identity
    Center)* in the protocol dropdown.
-2. Choose _Connect_ and select the AWS CLI profile name when prompted.
+
+   :::{tip}
+   If you already have a bookmark using *AWS S3 (IAM Identity Center)* and want to use new configuration details, make sure you are not creating a bookmark in a browser window with it connected, otherwise the current values will be copied to the new bookmark.
+   :::
+   
+3. Choose _Connect_ and select the AWS CLI profile name when prompted.
 
    :::{image} _images/S3_CLI_Profile_Prompt.png
    :alt: AWS CLI Profile Prompt
@@ -103,7 +108,7 @@ an external identity provider (IdP).
 
        :::
 
-3. Choose the _SSO Region_ when prompted.
+4. Choose the _SSO Region_ when prompted.
 
    :::{warning}
    Must match the region selected when [setting up](#configuration-in-aws-iam-identity-center) IAM Identity Center in
@@ -115,14 +120,14 @@ an external identity provider (IdP).
    :width: 400px
    :::
 
-4. Enter the _Issuer URL_ or _AWS Access Portal URL_ when prompted for the SSO start URL.
+5. Enter the _Issuer URL_ or _AWS Access Portal URL_ when prompted for the SSO start URL.
 
    :::{image} _images/AWS_Identity_Center_Issuer_URL_Prompt.png
    :alt: AWS IAM Identity Center Issuer URL Prompt
    :width: 400px
    :::
 
-5. Login to AWS or your third-party identity provider followed by choosing _Allow access_ to _Cyberduck_ or _Mountain Duck_
+6. Login to AWS or your third-party identity provider followed by choosing _Allow access_ to _Cyberduck_ or _Mountain Duck_
    in the AWS access portal.
 
    :::{image} _images/IAM_IdentityCenter_Allow_Access.png
@@ -135,13 +140,13 @@ an external identity provider (IdP).
    with the connection setup. You can close the web browser window after confirming access.
    :::
 
-6. Choose the _AWS Account ID_ when prompted.
+7. Choose the _AWS Account ID_ when prompted.
 
    :::{tip}
    This step is skipped if only a single AWS account is configured with your AWS IAM Identity Center instance.
    :::
 
-7. Choose the _Permission set name_ when prompted previously [configured](#configuration-in-aws-iam-identity-center).
+8. Choose the _Permission set name_ when prompted previously [configured](#configuration-in-aws-iam-identity-center).
 
    :::{tip}
    This step is skipped if only a single AWS account is configured with your AWS IAM Identity Center instance.
